@@ -1,0 +1,50 @@
+---
+# This playbook will install mysql and create db user and give permissions.
+
+- name: contraseña root para MySQL
+  debconf:
+   name: mysql-server
+   question: mysql-server/root_password
+   value: "123456"
+   vtype: password
+
+
+- name: Confirmando contraseña root de MySQL
+  debconf:
+   name: mysql-server
+   question: mysql-server/root_password_again
+   value: "123456"
+   vtype: password
+
+
+- name: Install Mysql package
+  apt: name={{ item }} state=installed
+  with_items:
+   - mysql-server
+   - python-mysqldb
+
+
+- name: configuracion
+  template:
+   src: my.cnf.j2
+   dest: /etc/mysql/mysql.conf.d/mysqld.cnf
+   owner: root
+   group: root
+   mode: 0644
+  notify:
+  - restart mysql
+
+- name: Iniciando servicio mysql
+  command: service mysql start
+  register: start
+
+
+- name: Create Application Database
+  mysql_db:
+    login_user: root
+    login_password: 123456
+    name: "{{ dbname }}"
+    state: present
+
+- name: Create Application DB User
+  mysql_user: login_user=root login_password=123456  name={{ dbuser }} password={{ upassword }} priv=*.*:ALL host='%' state=present

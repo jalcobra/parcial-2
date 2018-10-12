@@ -1,0 +1,12 @@
+---
+# These tasks are responsible for copying the latest dev/production code from
+# the version control system.
+
+- name: Copy the code from repository
+  git: repo={{ repository }} dest=/opt/prueba
+
+- name: copiar sitio a el directorio web de apache
+  command: cp -R -u /opt/prueba /var/www/html/prueba
+
+- name: Creates the index.php file
+  template: src=index.php.j2 dest=/var/www/html/prueba/index.php
