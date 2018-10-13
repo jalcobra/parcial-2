@@ -65,7 +65,7 @@ ssh -o StrictHostKeyChecking=no root@mysql_server -p 2222 -i ../key.private host
 
 Quinto paso, confirmación
 -------------------------------------------
-Realiza una prueba de conexión a las maquinas que se crearon recientemente, por defecto el paso anterior crea n cantidad de dockers con el ```puerto 2221 y 2222``` abiertos para conexión:
+Realiza una prueba de conexión a las maquinas que se crearon recientemente, por defecto el paso anterior crean cantidad de dockers con el ```puerto 2221 y 2222``` abiertos para conexión:
 ```
 ssh root@web_server -p 2221 -i ../key.private 
 ssh root@mysql_server -p 2222 -i ../key.private
