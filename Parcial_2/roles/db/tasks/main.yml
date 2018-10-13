@@ -1,5 +1,5 @@
 ---
-# This playbook will install mysql and create db user and give permissions.
+#  This playbook will install mysql and create db user and give permissions.
 
 - name: contraseña root para MySQL
   debconf:
