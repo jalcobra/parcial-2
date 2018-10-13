@@ -1,22 +1,20 @@
-Documentacion 
--------------------------------------------
-Para poder migrar los servidores de Redhat/CentOS a Ubuntu server
+Documentacion Para poder migrar los servidores de Redhat/CentOS a Ubuntu server
 -------------------------------------------
 Configuracion de los dockers
 
 
-primer paso, creación y configuraciones de dockers
+Primero se crean y se configuran los dockers
 -------------------------------------------
 
-1. Debes construir un docker personalizado que incluye el servidor openssh,
+1. Se debe construir un docker personalizado que incluye el servidor openssh,
 
 ```
 docker build -t server:16.04 . 
 ```
 En el paso anterior debes verificar el ID de la imágen que se creó y seleccionarla para los pasos a continuación.
 
-Segundo paso, despliege
--------------------------------------------
+Segundo paso, se despliega
+
 Creacion de contenedores.
 Crearemos unas maquinas para el despliegue de: apache y mysql.
 
