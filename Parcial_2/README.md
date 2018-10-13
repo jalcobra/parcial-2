@@ -1,11 +1,4 @@
 
-Para realizar las prácticas se debe tener instalado en el equipo o servidor de pruebas:
-  - Docker
-  - Python
-
-##  Se instala  Ansible 
-
-        pip install ansible
 
 ## Construcción de la imagen personalizada
 Ingresa a la carpeta ```Dockerfile``` y sigue los pasos que dicen allí.
