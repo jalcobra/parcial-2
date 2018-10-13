@@ -7,8 +7,8 @@ Para realizar las prácticas se debe tener instalado en el equipo o servidor de 
 
         pip install ansible
 
-## Construcción de la imagen personalizada
-Ingresa a la carpeta ```Dockerfile``` y sigue los pasos indicados.
+### Construcción de la imagen personalizada
+Ingresa a la carpeta ```Dockerfile``` y sigue los pasos que dicen allí.
 
 
 
