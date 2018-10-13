@@ -69,5 +69,5 @@ ssh root@web_server -p 2221 -i ../key.private
 ssh root@mysql_server -p 2222 -i ../key.private
 ```
 
-Si la conexión se establece, ya está listo para seguir con ansible.
+Si la conexión se establece, ya se puede seguir con ansible.
 -------------------------------------------
